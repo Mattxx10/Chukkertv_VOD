@@ -1,0 +1,124 @@
+@font-face{
+    font-family: 'Poppins';
+    src: url('../../resources/fonts/Poppins-Medium.ttf') format("truetype");
+}
+
+.row_title{
+    margin-left: 15px;
+}
+
+.row_posters{
+    scroll-behavior: smooth;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.row_posters::-webkit-scrollbar{
+    display: none;
+}
+
+.row-poster{
+    max-height: 120px;
+    object-fit: contain;
+    margin-right: 14px;
+    border-radius: 0.2vw;
+    transition: transform 450ms;
+}
+
+.poster_name{
+    text-shadow: 5px 5px 10px black;
+    width: 319.5px;
+    text-align: center;
+    font-size: 15px;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.largePoster_name{
+    width: 219px;
+    text-align: center;
+}
+
+.row_poster img{
+    max-height: 180px;
+    object-fit: contain;
+    margin-right: 14px;
+    border-radius: 0.2vw;
+}
+
+.row_posterLarge img{
+    max-height: 330px;
+}
+
+.row_poster:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+    transition: all 0.5s;
+}
+
+.movieName{
+    z-index:1;
+    position: absolute;
+}
+
+.scroll_button{
+    opacity: 0;
+    visibility: hidden;
+    font-family: 'Poppins';
+    text-shadow: 1px 1px 5px black;
+    padding: 5px;
+    font-size: 60px;
+    line-height: 200px;
+    height: 200px;
+    position: absolute;
+    object-fit: contain;
+    z-index: 1;
+    width: 50px;
+    -webkit-transition: opacity 400ms, visibility 400ms;
+    transition: opacity 400ms, visibility 400ms;
+}
+
+.scroll_button:hover{
+    cursor: pointer;
+}
+
+.scroll_left{
+    text-align: right;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 21%, rgba(17,17,17,0) 84%, rgba(34,34,34,0) 98%);
+    left: -10px;
+}
+
+.scroll_right{
+    text-align: left;
+    background: linear-gradient(270deg, rgba(0,0,0,1) 21%, rgba(17,17,17,0) 84%, rgba(34,34,34,0) 98%);
+    right: 0;
+}
+
+.poster_button{
+    height: 370px;
+    line-height: 360px;
+}
+
+@media only screen and (max-width: 700px) {
+    .scroll_button{
+        display: none;
+    }
+
+    .row_poster img{
+        max-height: 120px;
+    }
+
+    .row_posterLarge img{
+        max-height: 220px;
+    }
+
+    .poster_name{
+        max-width: 213px;
+    }
+
+    .largePoster_name{
+        max-width: 146px;
+    }
+}
